@@ -1,12 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Home = () => {
+const Home = (props) => {
+    const { users } = props;
+    const userList = users.map(user => {
+        return(
+            <div className="post card" key={user.id}>
+                <p>{user.name}</p>
+                <p>Last Seen: {user.lastSeen}</p>
+            </div>
+        )
+    })
     return(
         <div className="container">
             <h3 className="center">Home</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint blanditiis fugiat nobis expedita sit illum ipsum beatae placeat incidunt provident aliquid aliquam, deserunt reiciendis, eaque dolorum molestiae quas. Dolores, nemo.</p>
+            <h5>Most Active Users</h5>
+            {userList}
         </div>
     )
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+    return {
+        users: state.users.users
+    }
+}
+
+export default connect(mapStateToProps)(Home);

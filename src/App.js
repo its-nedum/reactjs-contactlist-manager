@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import About from './components/About';
+import Dashboard from './components/dashboard/Dashboard'
 
 class App extends React.Component {
   state = {
@@ -20,6 +21,7 @@ class App extends React.Component {
       users: user
     });
   }
+
 
   loginUser = (info) => {
    this.state.users.forEach( (chk) => {
@@ -42,6 +44,7 @@ class App extends React.Component {
         <Route path="/register" render={ () => <Register registerUser={this.registerUser} /> } />
         <Route path="/login" render={ () => <Login loginUser={this.loginUser} /> } />
         <Route path="/about" component={About} />
+        <Route path="/dashboard" component={Dashboard} />
       
     </div>
     </BrowserRouter>

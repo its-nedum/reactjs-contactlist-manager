@@ -21,7 +21,6 @@ class Register extends React.Component {
       }
 
     render() {
-
         return(
             <div className="container">
             <h3 className="center">Register</h3>
