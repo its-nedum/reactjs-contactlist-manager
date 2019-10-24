@@ -1,22 +1,27 @@
-import React from 'react';
-import SignedInSidebar from '../../layouts/SignedInSidebar';
+import React from 'react'
+import RecentContact from './recentContact'
+import Notification from './Notification'
 
-class Dashboard extends React.Component {
-    render() {
-        return(
-            <div className="container">
-                <h3 className="center">Dashboard</h3>
+const Dashboard = () => {
+    return (
+        <div className="container">
+                
                 <div className="row">
-                    <div className="col s12 m3">
-                        <SignedInSidebar />
+                    <div className="col s12 m6">
+                        <RecentContact />
                     </div>
-                    <div className="col s12 m8 offset-m1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deserunt, illum libero consequuntur amet facilis rem sunt incidunt repellendus culpa odit voluptas dicta, architecto tempora officia vel possimus praesentium vitae.
+                    <div className="col s12 m5 offset-m1">
+                        <Notification />
                     </div>
                 </div>
             </div>
-        )
-    }
+    )
 }
 
-export default Dashboard;
+export default Dashboard
+
+
+
+
+
+
