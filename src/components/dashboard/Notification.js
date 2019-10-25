@@ -5,28 +5,28 @@ function Notification() {
         <div className="section">
             <div className="card z-depth-0">
                 <div className="card-content">
-                    <span className="notifications">Notifications</span>
+                    <span className="notifications">Birthday Notifications</span>
                     <ul className="notifications">
                         <li>
                             <span className="pink-text">Manasseh Omachonu</span> 
-                            <span> Added to your contacts</span>
-                            <div className="grey-text note-date">
-                            Created on 24 October, 2019
-                            </div>
+                            <span> is celebrating their birthday on </span>
+                            <span className="grey-text note-date">
+                                24 October, 2019
+                            </span>
                         </li>
                         <li>
                             <span className="pink-text">Amanda Peter</span> 
-                            <span> Added to your contacts</span>
-                            <div className="grey-text note-date">
-                            Created on 24 October, 2019
-                            </div>
+                            <span> is celebrating their birthday on </span>
+                            <span className="grey-text note-date">
+                                24 October, 2019
+                            </span>
                         </li>
                         <li>
                             <span className="pink-text">Edward Moses</span> 
-                            <span> Added to your contacts</span>
-                            <div className="grey-text note-date">
-                            Created on 24 October, 2019
-                            </div>
+                            <span> is celebrating their birthday on </span>
+                            <span className="grey-text note-date">
+                                24 October, 2019
+                            </span>
                         </li>
                     </ul>
                 </div>

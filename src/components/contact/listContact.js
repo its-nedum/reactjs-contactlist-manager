@@ -13,7 +13,7 @@ const listContact = (props) => {
             </div>
             <div className="card-action grey lighten-4 grey-text">
                 <div className="grey-text">Created on 24 October, 2019</div>
-                <Link to='/contacts/23' class="waves-effect waves-light btn-small right-align">Show more</Link>  
+                <Link to={'/contacts/' + contact.id} className="waves-effect waves-light btn-small right-align">Show more</Link>  
             </div>
             
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createContact } from '../../store/actions/contactActions'
+import { Redirect } from 'react-router-dom'
 
 export class CreateContact extends Component {
     state = {
@@ -32,9 +33,11 @@ export class CreateContact extends Component {
 
     render() {
         //console.log(this.props)
+        const { auth } = this.props;
+        if(!auth.uid) return <Redirect to='/' />
         return (
             <div className="container">
-                <form className="white">
+                <form className="white" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Create Contact</h5>
                     <div className="input-field">
                         <label htmlFor="firstName">FirstName</label>
@@ -74,10 +77,16 @@ export class CreateContact extends Component {
     }
 }
 
+const mapStateToProps =(state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         createContact: (contact) => dispatch(createContact(contact))
     }
 }
 
-export default connect(null, mapDispatchToProps)(CreateContact)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateContact)
